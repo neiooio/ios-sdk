@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FED8E96C1B84485200899E9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FED8E96B1B84485200899E9F /* main.m */; };
+		FED8E96F1B84485200899E9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FED8E96E1B84485200899E9F /* AppDelegate.m */; };
+		FED8E9721B84485200899E9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED8E9711B84485200899E9F /* ViewController.m */; };
+		FED8E9751B84485200899E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED8E9731B84485200899E9F /* Main.storyboard */; };
+		FED8E9771B84485200899E9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED8E9761B84485200899E9F /* Images.xcassets */; };
+		FED8E97A1B84485200899E9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED8E9781B84485200899E9F /* LaunchScreen.xib */; };
+		FED8E9861B84485200899E9F /* NeiooNewbieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FED8E9851B84485200899E9F /* NeiooNewbieTests.m */; };
+		FED8E9A71B84616D00899E9F /* libNeioo-arm64-1.0b.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E9981B84616D00899E9F /* libNeioo-arm64-1.0b.a */; };
+		FED8E9A81B84616D00899E9F /* libNeioo-armv7-1.0b.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E9991B84616D00899E9F /* libNeioo-armv7-1.0b.a */; };
+		FED8E9A91B84616D00899E9F /* libNeioo-armv7s-1.0b.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E99A1B84616D00899E9F /* libNeioo-armv7s-1.0b.a */; };
+		FED8E9AA1B84616D00899E9F /* libNeioo-i386-1.0b.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E99B1B84616D00899E9F /* libNeioo-i386-1.0b.a */; };
+		FED8E9AB1B84616D00899E9F /* libNeioo-x86_64-1.0b.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E99C1B84616D00899E9F /* libNeioo-x86_64-1.0b.a */; };
+		FED8E9AC1B84616D00899E9F /* libSensoroBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E9A61B84616D00899E9F /* libSensoroBeaconKit.a */; };
+		FED8E9AE1B8461D000899E9F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E9AD1B8461D000899E9F /* CoreBluetooth.framework */; };
+		FED8E9B01B8461DE00899E9F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E9AF1B8461DE00899E9F /* CoreLocation.framework */; };
+		FED8E9B21B8461E900899E9F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E9B11B8461E900899E9F /* Security.framework */; };
+		FED8E9B41B8461F500899E9F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E9B31B8461F500899E9F /* SystemConfiguration.framework */; };
+		FED8E9B61B847F6E00899E9F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED8E9B51B847F6E00899E9F /* CoreMotion.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FED8E9801B84485200899E9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FED8E95E1B84485200899E9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FED8E9651B84485200899E9F;
+			remoteInfo = NeiooNewbie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FED8E9661B84485200899E9F /* NeiooNewbie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeiooNewbie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED8E96A1B84485200899E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FED8E96B1B84485200899E9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FED8E96D1B84485200899E9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FED8E96E1B84485200899E9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FED8E9701B84485200899E9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FED8E9711B84485200899E9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FED8E9741B84485200899E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FED8E9761B84485200899E9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FED8E9791B84485200899E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FED8E97F1B84485200899E9F /* NeiooNewbieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeiooNewbieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED8E9841B84485200899E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FED8E9851B84485200899E9F /* NeiooNewbieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeiooNewbieTests.m; sourceTree = "<group>"; };
+		FED8E9911B84616D00899E9F /* Neioo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neioo.h; sourceTree = "<group>"; };
+		FED8E9921B84616D00899E9F /* NeiooAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeiooAction.h; sourceTree = "<group>"; };
+		FED8E9931B84616D00899E9F /* NeiooBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeiooBeacon.h; sourceTree = "<group>"; };
+		FED8E9941B84616D00899E9F /* NeiooCampaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeiooCampaign.h; sourceTree = "<group>"; };
+		FED8E9951B84616D00899E9F /* NeiooCriteria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeiooCriteria.h; sourceTree = "<group>"; };
+		FED8E9961B84616D00899E9F /* NeiooException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeiooException.h; sourceTree = "<group>"; };
+		FED8E9971B84616D00899E9F /* NeiooSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeiooSpace.h; sourceTree = "<group>"; };
+		FED8E9981B84616D00899E9F /* libNeioo-arm64-1.0b.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libNeioo-arm64-1.0b.a"; sourceTree = "<group>"; };
+		FED8E9991B84616D00899E9F /* libNeioo-armv7-1.0b.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libNeioo-armv7-1.0b.a"; sourceTree = "<group>"; };
+		FED8E99A1B84616D00899E9F /* libNeioo-armv7s-1.0b.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libNeioo-armv7s-1.0b.a"; sourceTree = "<group>"; };
+		FED8E99B1B84616D00899E9F /* libNeioo-i386-1.0b.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libNeioo-i386-1.0b.a"; sourceTree = "<group>"; };
+		FED8E99C1B84616D00899E9F /* libNeioo-x86_64-1.0b.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libNeioo-x86_64-1.0b.a"; sourceTree = "<group>"; };
+		FED8E99F1B84616D00899E9F /* SBKBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKBeacon.h; sourceTree = "<group>"; };
+		FED8E9A01B84616D00899E9F /* SBKBeaconID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKBeaconID.h; sourceTree = "<group>"; };
+		FED8E9A11B84616D00899E9F /* SBKBeaconManager+Cloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SBKBeaconManager+Cloud.h"; sourceTree = "<group>"; };
+		FED8E9A21B84616D00899E9F /* SBKBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKBeaconManager.h; sourceTree = "<group>"; };
+		FED8E9A31B84616D00899E9F /* SBKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKConstants.h; sourceTree = "<group>"; };
+		FED8E9A41B84616D00899E9F /* SBKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKError.h; sourceTree = "<group>"; };
+		FED8E9A51B84616D00899E9F /* SBKUnitConvertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKUnitConvertHelper.h; sourceTree = "<group>"; };
+		FED8E9A61B84616D00899E9F /* libSensoroBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSensoroBeaconKit.a; sourceTree = "<group>"; };
+		FED8E9AD1B8461D000899E9F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		FED8E9AF1B8461DE00899E9F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FED8E9B11B8461E900899E9F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FED8E9B31B8461F500899E9F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FED8E9B51B847F6E00899E9F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FED8E9631B84485200899E9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED8E9B61B847F6E00899E9F /* CoreMotion.framework in Frameworks */,
+				FED8E9B41B8461F500899E9F /* SystemConfiguration.framework in Frameworks */,
+				FED8E9B21B8461E900899E9F /* Security.framework in Frameworks */,
+				FED8E9B01B8461DE00899E9F /* CoreLocation.framework in Frameworks */,
+				FED8E9AE1B8461D000899E9F /* CoreBluetooth.framework in Frameworks */,
+				FED8E9AC1B84616D00899E9F /* libSensoroBeaconKit.a in Frameworks */,
+				FED8E9A71B84616D00899E9F /* libNeioo-arm64-1.0b.a in Frameworks */,
+				FED8E9AA1B84616D00899E9F /* libNeioo-i386-1.0b.a in Frameworks */,
+				FED8E9A81B84616D00899E9F /* libNeioo-armv7-1.0b.a in Frameworks */,
+				FED8E9A91B84616D00899E9F /* libNeioo-armv7s-1.0b.a in Frameworks */,
+				FED8E9AB1B84616D00899E9F /* libNeioo-x86_64-1.0b.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED8E97C1B84485200899E9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FED8E95D1B84485200899E9F = {
+			isa = PBXGroup;
+			children = (
+				FED8E9B51B847F6E00899E9F /* CoreMotion.framework */,
+				FED8E9B31B8461F500899E9F /* SystemConfiguration.framework */,
+				FED8E9B11B8461E900899E9F /* Security.framework */,
+				FED8E9AF1B8461DE00899E9F /* CoreLocation.framework */,
+				FED8E9AD1B8461D000899E9F /* CoreBluetooth.framework */,
+				FED8E9681B84485200899E9F /* NeiooNewbie */,
+				FED8E9821B84485200899E9F /* NeiooNewbieTests */,
+				FED8E9671B84485200899E9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FED8E9671B84485200899E9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E9661B84485200899E9F /* NeiooNewbie.app */,
+				FED8E97F1B84485200899E9F /* NeiooNewbieTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FED8E9681B84485200899E9F /* NeiooNewbie */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E98F1B84616D00899E9F /* NeiooSDK */,
+				FED8E96D1B84485200899E9F /* AppDelegate.h */,
+				FED8E96E1B84485200899E9F /* AppDelegate.m */,
+				FED8E9701B84485200899E9F /* ViewController.h */,
+				FED8E9711B84485200899E9F /* ViewController.m */,
+				FED8E9731B84485200899E9F /* Main.storyboard */,
+				FED8E9761B84485200899E9F /* Images.xcassets */,
+				FED8E9781B84485200899E9F /* LaunchScreen.xib */,
+				FED8E9691B84485200899E9F /* Supporting Files */,
+			);
+			path = NeiooNewbie;
+			sourceTree = "<group>";
+		};
+		FED8E9691B84485200899E9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E96A1B84485200899E9F /* Info.plist */,
+				FED8E96B1B84485200899E9F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FED8E9821B84485200899E9F /* NeiooNewbieTests */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E9851B84485200899E9F /* NeiooNewbieTests.m */,
+				FED8E9831B84485200899E9F /* Supporting Files */,
+			);
+			path = NeiooNewbieTests;
+			sourceTree = "<group>";
+		};
+		FED8E9831B84485200899E9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E9841B84485200899E9F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FED8E98F1B84616D00899E9F /* NeiooSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E9901B84616D00899E9F /* include */,
+				FED8E9981B84616D00899E9F /* libNeioo-arm64-1.0b.a */,
+				FED8E9991B84616D00899E9F /* libNeioo-armv7-1.0b.a */,
+				FED8E99A1B84616D00899E9F /* libNeioo-armv7s-1.0b.a */,
+				FED8E99B1B84616D00899E9F /* libNeioo-i386-1.0b.a */,
+				FED8E99C1B84616D00899E9F /* libNeioo-x86_64-1.0b.a */,
+				FED8E99D1B84616D00899E9F /* SensoroBeaconKit */,
+			);
+			path = NeiooSDK;
+			sourceTree = "<group>";
+		};
+		FED8E9901B84616D00899E9F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E9911B84616D00899E9F /* Neioo.h */,
+				FED8E9921B84616D00899E9F /* NeiooAction.h */,
+				FED8E9931B84616D00899E9F /* NeiooBeacon.h */,
+				FED8E9941B84616D00899E9F /* NeiooCampaign.h */,
+				FED8E9951B84616D00899E9F /* NeiooCriteria.h */,
+				FED8E9961B84616D00899E9F /* NeiooException.h */,
+				FED8E9971B84616D00899E9F /* NeiooSpace.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FED8E99D1B84616D00899E9F /* SensoroBeaconKit */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E99E1B84616D00899E9F /* Headers */,
+				FED8E9A61B84616D00899E9F /* libSensoroBeaconKit.a */,
+			);
+			path = SensoroBeaconKit;
+			sourceTree = "<group>";
+		};
+		FED8E99E1B84616D00899E9F /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				FED8E99F1B84616D00899E9F /* SBKBeacon.h */,
+				FED8E9A01B84616D00899E9F /* SBKBeaconID.h */,
+				FED8E9A11B84616D00899E9F /* SBKBeaconManager+Cloud.h */,
+				FED8E9A21B84616D00899E9F /* SBKBeaconManager.h */,
+				FED8E9A31B84616D00899E9F /* SBKConstants.h */,
+				FED8E9A41B84616D00899E9F /* SBKError.h */,
+				FED8E9A51B84616D00899E9F /* SBKUnitConvertHelper.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FED8E9651B84485200899E9F /* NeiooNewbie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FED8E9891B84485200899E9F /* Build configuration list for PBXNativeTarget "NeiooNewbie" */;
+			buildPhases = (
+				FED8E9621B84485200899E9F /* Sources */,
+				FED8E9631B84485200899E9F /* Frameworks */,
+				FED8E9641B84485200899E9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeiooNewbie;
+			productName = NeiooNewbie;
+			productReference = FED8E9661B84485200899E9F /* NeiooNewbie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FED8E97E1B84485200899E9F /* NeiooNewbieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FED8E98C1B84485200899E9F /* Build configuration list for PBXNativeTarget "NeiooNewbieTests" */;
+			buildPhases = (
+				FED8E97B1B84485200899E9F /* Sources */,
+				FED8E97C1B84485200899E9F /* Frameworks */,
+				FED8E97D1B84485200899E9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FED8E9811B84485200899E9F /* PBXTargetDependency */,
+			);
+			name = NeiooNewbieTests;
+			productName = NeiooNewbieTests;
+			productReference = FED8E97F1B84485200899E9F /* NeiooNewbieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FED8E95E1B84485200899E9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Herxun;
+				TargetAttributes = {
+					FED8E9651B84485200899E9F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					FED8E97E1B84485200899E9F = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = FED8E9651B84485200899E9F;
+					};
+				};
+			};
+			buildConfigurationList = FED8E9611B84485200899E9F /* Build configuration list for PBXProject "NeiooNewbie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FED8E95D1B84485200899E9F;
+			productRefGroup = FED8E9671B84485200899E9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FED8E9651B84485200899E9F /* NeiooNewbie */,
+				FED8E97E1B84485200899E9F /* NeiooNewbieTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FED8E9641B84485200899E9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED8E9751B84485200899E9F /* Main.storyboard in Resources */,
+				FED8E97A1B84485200899E9F /* LaunchScreen.xib in Resources */,
+				FED8E9771B84485200899E9F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED8E97D1B84485200899E9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FED8E9621B84485200899E9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED8E9721B84485200899E9F /* ViewController.m in Sources */,
+				FED8E96F1B84485200899E9F /* AppDelegate.m in Sources */,
+				FED8E96C1B84485200899E9F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED8E97B1B84485200899E9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED8E9861B84485200899E9F /* NeiooNewbieTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FED8E9811B84485200899E9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FED8E9651B84485200899E9F /* NeiooNewbie */;
+			targetProxy = FED8E9801B84485200899E9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FED8E9731B84485200899E9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FED8E9741B84485200899E9F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FED8E9781B84485200899E9F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FED8E9791B84485200899E9F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FED8E9871B84485200899E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FED8E9881B84485200899E9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FED8E98A1B84485200899E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = NeiooNewbie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NeiooNewbie/NeiooSDK",
+					"$(PROJECT_DIR)/NeiooNewbie/NeiooSDK/SensoroBeaconKit",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FED8E98B1B84485200899E9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = NeiooNewbie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NeiooNewbie/NeiooSDK",
+					"$(PROJECT_DIR)/NeiooNewbie/NeiooSDK/SensoroBeaconKit",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FED8E98D1B84485200899E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeiooNewbieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeiooNewbie.app/NeiooNewbie";
+			};
+			name = Debug;
+		};
+		FED8E98E1B84485200899E9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeiooNewbieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeiooNewbie.app/NeiooNewbie";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FED8E9611B84485200899E9F /* Build configuration list for PBXProject "NeiooNewbie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED8E9871B84485200899E9F /* Debug */,
+				FED8E9881B84485200899E9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FED8E9891B84485200899E9F /* Build configuration list for PBXNativeTarget "NeiooNewbie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED8E98A1B84485200899E9F /* Debug */,
+				FED8E98B1B84485200899E9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FED8E98C1B84485200899E9F /* Build configuration list for PBXNativeTarget "NeiooNewbieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED8E98D1B84485200899E9F /* Debug */,
+				FED8E98E1B84485200899E9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FED8E95E1B84485200899E9F /* Project object */;
+}
