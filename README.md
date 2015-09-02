@@ -39,12 +39,12 @@ Note that if the user doesn't allow location services to be enabled for your app
 
 ### Project Initialization Setting
 ##### 1. Import Neioo
-In order to facilitate implementations. Please import Nieoo to `AppDelegate.m`
+In order to facilitate implementations. Please import Neioo to `AppDelegate.m`
 ```
 #import @"Neioo.h"
 ```
 ##### 2. Initialize Neioo
-Neioo must be started only after initialization. if the user doesn't complete initialization to use Neioo, this time, it will throw the NeiooException to remind you to complete this step.
+Neioo must be started only after initialization. If the user doesn't complete initialization before using Neioo, then it will throw the NeiooException to remind you to complete this step.
 ```
 #import "AppDelegate.h"
 #import "Neioo.h"
@@ -73,7 +73,7 @@ typedef enum {
 ```
 ### Neioo Cloud Settings
 ##### 1. Create Beacon
-Start using Neioo, the most important thing is that you must have a Neioo Beacon, and create or upload it's information to Neioo Cloud. There are two ways for creating as shown below:
+ The most important thing of using Neioo is that you must have a Neioo Beacon, and create or upload it's information to Neioo Cloud. There are two ways for creating as shown below:
 
 - Manually create
 - Upload by Neioo Officer
@@ -86,19 +86,19 @@ After the establishment of beacon, you also need a space to deploy beacon. This 
 ![](screenshot/space_settings.png)
 
 ##### 3. Create Action
-Once you have completed the first two steps, this time, you'll need the action to trigger some surprise when user encounters beacon. This action may be the phone displays a coupon icon, playing a commercial video , open a product web site. Please see the step as shown below :
+Once you have completed the first two steps, this time, you'll need the action to trigger some surprise when user encounters beacon. This action may be displaying a coupon icon on the phone, playing a commercial video , showing a product web site. Please see the step as shown below :
 ![](screenshot/show_image.png)
 
 ***
-### Implementation: Basic Event Triggered
-If you have completed the initial Neioo Cloud setting, we can begin to implement a simple demo, will be shown how to combined the Neioo SDK with Neioo Cloud .
+### Implementation: Basic Event Trigger
+If you have completed the initial Neioo Cloud setting, we can have a simple demo shown how to combined the Neioo SDK with Neioo Cloud .
 ##### 1. Create Triggered Campaign
-Please do not impatient for previous step, all of the steps are in order to produce the reusable material for demo. Now we need to build the campaign, which will contain a lot of trigger-related settings, such as how often the campaign trigger, start time and end time of campaign, the range of triggered. Please see the step as shown below :
+Please do not impatient for previous step, all of the steps are in order to produce the reusable material for demo. Now that we need to build the campaign which contains a lot of trigger-related settings, such as how often the campaign triggered, start time and end time of campaign, the range of triggered. Please see the step as shown below :
 
 ![](screenshot/add_campaign01.png)
 
 ##### 2. Implementation: Space Delegate Function
-This method is mainly used to detect a user enters / leaves space. When the user enters beacon deployment range, the following methods will trigger by Neioo：
+This method is mainly used to detect that a user enters / leaves space. When the user enters the region of space which is determined by signal of beacons, the following methods will be triggered by Neioo：
 ```
 - (void)neioo:(Neioo *)neioo didEnterSpace:(NeiooSpace *)space
 {
@@ -113,7 +113,7 @@ When the user leaves beacon deployment range, the following methods will trigger
 }
 ```
 ##### 3. Implementation: Campaign Triggered Delegate Function
-This method is mainly used to receive user triggered Campaign, and triggered beacon. In Neioo SDK, campaign is packaged as `NeiooCampaign` object, which contains the settings of ​​Neioo Cloud and beacon corresponding object is `NeiooBeacon`, which contains information of beacon in Neioo Cloud. Now, we can use the action we already set up as an example：
+When the campaign is triggered, the method will be called and return with campaign. In Neioo SDK, campaign is packaged as `NeiooCampaign` object, which contains the settings of ​​Neioo Cloud and beacon corresponding object is `NeiooBeacon`, which contains information of beacon in Neioo Cloud. Now that we can use the action we already set up as an example：
 ```
 - (void)campaignTriggered:(NeiooCampaign *)campaign beacon:(NeiooBeacon *)beacon
 {
@@ -127,18 +127,18 @@ This method is mainly used to receive user triggered Campaign, and triggered bea
 }
 ```
 ##### 4. Testing Result
-When you move the phone close to the beacon with campaign, campaign will trigger by Neioo. In this example, we set the trigger range (proximity) to `Immediate`, which equivalent to about 50 cm from beacon. In order to see the log in Xcode, you can also move beacon close to your phone for testing, or add some UI as a reminder .
+When you move the phone close to the beacon with campaign, campaign will be triggered by Neioo. In this example, we set the trigger range (proximity) to `Immediate`, which equivalent to about 50 cm from beacon. In order to see the log in Xcode, you can also move beacon close to your phone for testing, or add some UI as a reminder .
 ***
 
-### Implementation: Conditional Event Triggered
-This demo is similar to the aforementioned implementations, the only difference is that we need to build the criteria with campaign for conditional triggered. We can target certain users to trigger this campaign, let us follow the steps to get started it !
+### Implementation: Conditional Event Trigger
+This demo is similar to the aforementioned implementations, the only difference is that we need to build the criteria for conditional campaign triggered. We can target certain users to trigger this campaign, let us follow the steps to get started it !
 
 ##### 1. Create Criteria
-We need to create a criteria which you can define the target value of criteria for campaign. In this example, we use the user's `age` as target value. campaign will trigger when user's `age is greater than 18`. Please see the step as shown below :
+We need to create a criteria for campaign, and you can define the target value of criteria by yourself. In this example, we use the user's `age` as target value. Then campaign will be triggered when user's `age is greater than 18`. Please see the step as shown below :
 ![](screenshot/add_criteria.png)
 
 ##### 2. Create Triggered Campaign
-Now, we create a campaign with criteria, and other settings can be consistent with the previous demo . Please see the step as shown below :
+Now that we create a campaign with criteria, and other settings can be consistent with the previous demo . Please see the step as shown below :
 ![](screenshot/add_campaign02.png)
 
 ##### 3. Import User's Data to Neioo
@@ -154,7 +154,7 @@ Now, we create a campaign with criteria, and other settings can be consistent wi
 ...
 ```
 ##### 4. Testing Result
-You can set the user's age `> 18` or `< 18` to verify whether the results are correct. In this example, we set the criteria `age > 18`. Then, campaign will trigger when user's age is greater than 18.  
+You can set the user's age `> 18` or `< 18` to verify whether the results are correct. In this example, we set the criteria `age > 18`. Then, campaign will be triggered when user's age is greater than 18.  
 ***
 ### Implementation: Shaking
 
@@ -166,7 +166,7 @@ This demo is similar to the aforementioned implementations, the only difference 
 ![](screenshot/add_shake_campaign.png)
 
 ##### 2. Implementation: Shake Range Delegate Function
-This delegate will notify you if user is in/out of the shake campaign range. You can show some UI to inform the user to shake his/her phone.
+This delegate will notify you if user is inside/outside the shake campaign range. You can show some UI to inform the user to shake his/her phone.
 ```
 - (void)inShakeRangeWithCampaign:(NeiooCampaign *)campaign
 {
@@ -179,7 +179,7 @@ This delegate will notify you if user is in/out of the shake campaign range. You
 }
 ```
 ##### 3. Implementation: Motion Detection and Execute Shake Campaign
-Firstly, add `CoreMotion.framework` to your project and import `Neioo.h`, `<CoreMotion/CoreMotion.h>` to `viewController.m`. When you received the shake signal, you can execute the verified campaign which is criteria matched. Here is the step by step :
+Firstly, add `CoreMotion.framework` to your project and import `Neioo.h`, `<CoreMotion/CoreMotion.h>` to `viewController.m`. When you received the shake signal, you can execute the campaign which is criteria matched. Here is the step by step :
 ```
 #import "ViewController.h"
 #import "Neioo.h"
