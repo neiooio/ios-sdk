@@ -39,12 +39,12 @@ ex. 開啟「定位服務」來允許「beacon」確認您的位置
 ### Project 初始化設定
 ##### 1. 匯入Neioo
 您可將Neioo 匯入至`AppDelegate.m`方便接下來的實作
-```
+``` objective-c
 #import @"Neioo.h"
 ```
 ##### 2. 設定Neioo 初始化
 Neioo 必須要初始化後才能開始使用，若沒完成初始化的步驟而直接使用Neioo，此時將會throw NeiooException，提醒您完成這步驟
-```
+``` objective-c
 #import "AppDelegate.h"
 #import "Neioo.h"
 // 1. Setup Neioo delegate
@@ -62,7 +62,7 @@ Neioo 必須要初始化後才能開始使用，若沒完成初始化的步驟�
 }
 ```
 location authorization mode 有兩種可以選擇，這會對應到你 info.plist所設定的提示訊息
-```
+``` objective-c
 #import "Neioo.h"
 typedef enum {
       NeiooLocationAuthorizationWhenInUse,
@@ -72,7 +72,7 @@ typedef enum {
 ```
 ### Neioo Cloud 初始化設定
 ##### 1. 建立Beacon
-要使用Neioo，一開始最重要的是你要有一顆Neioo Beacon，並且將它建立在Neioo Cloud，而建立的方法有兩種：    
+要使用Neioo，一開始最重要的是你要有一顆Neioo Beacon，並且將它建立在Neioo Cloud，而建立的方法有兩種：
 
 - 手動建立
 - 利用Neioo Officer匯入
@@ -98,14 +98,14 @@ typedef enum {
 
 ##### 2. 實現進出 Space Delegate function
 此方法主要是用來偵測使用者進出Space的事件，當使用者進入您所部署的beacon範圍內時，會觸發下列方法：
-```
+``` objective-c
 - (void)neioo:(Neioo *)neioo didEnterSpace:(NeiooSpace *)space
 {
     NSLog(@"Enter Space!!!");
 }
 ```
 當使用者從 Space要離開時，此刻則會觸發下列方法：
-```
+``` objective-c
 - (void)neioo:(Neioo *)neioo didLeaveSpace:(NeiooSpace *)space
 {
     NSLog(@"Leave Space!!!");
@@ -114,7 +114,7 @@ typedef enum {
 ##### 3. 實現 Campaign Triggered Delegate function
 此方法主是用來接收使用者所觸發的Campaign，以及觸發Campaign所對應的beacon，其中Campaign在SDK封裝為`NeiooCampaign`物件，裡面包含了Neioo Cloud所設定的數值，而Beacon對應的物件為`NeiooBeacon`，裡面包含了Neioo Cloud所記錄的beacon 資訊。
 此範例我們以先前所設置好的Action為例：
-```
+``` objective-c
 - (void)campaignTriggered:(NeiooCampaign *)campaign beacon:(NeiooBeacon *)beacon
 {
     for (NeiooAction *action in campaign.actions){
@@ -142,7 +142,7 @@ typedef enum {
 ![](screenshot/add_campaign02.png)
 
 ##### 3. 匯入使用者資料至Neioo
-```
+``` objective-c
 ...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Neioo setUpAppKey:@"YOUR APP KEY" delegate:self withLocationAuthorization:NeiooLocationAuthorizationAlways];
@@ -167,14 +167,14 @@ typedef enum {
 
 ##### 2. 實現進出搖一搖範圍偵測方法
 當使用者進入 Campaign所設定範圍，會觸發 delegate function提示使用者，在這個範圍內可以搖一搖手機來觸發事件。
-```
+``` objective-c
 - (void)inShakeRangeWithCampaign:(NeiooCampaign *)campaign
 {
     NSLog(@"In shake range ...");
 }
 ```
 當使用者離開範圍時，則要提示使用者已離開搖一搖範圍。
-```
+``` objective-c
 - (void)outOfShakeRangeWithCampaign:(NeiooCampaign *)campaign
 {
     NSLog(@"Out of shake range ...");
@@ -182,7 +182,7 @@ typedef enum {
 ```
 ##### 3. 實現搖一搖 Motion Detection
 加入CoreMotion.framework至Project，在`viewController.m`匯入`Neioo.h`、`<CoreMotion/CoreMotion.h>`，當搖動完成後，可利用`getShakeCampaigns`取得搖一搖所要觸發的事件與動作，實現方法如下：
-```
+``` objective-c
 #import "ViewController.h"
 #import "Neioo.h"
 #import <CoreMotion/CoreMotion.h>
@@ -216,7 +216,7 @@ typedef enum {
         NSLog(@"SHAKE ENDED");
         // show shake campaign
         NSArray *campaigns = [[Neioo shared]getShakeCampaigns];
-        
+
         for (NeiooCampaign *campaign in campaigns){
             for (NeiooAction *action in campaign.actions){
                 NSLog(@"Shake campaign triggered \n %@",[action.actionDetail description]);

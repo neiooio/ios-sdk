@@ -40,12 +40,13 @@ Note that if the user doesn't allow location services to be enabled for your app
 ### Project Initialization Setting
 ##### 1. Import Neioo
 In order to facilitate implementations. Please import Neioo to `AppDelegate.m`
-```
+``` objective-c
 #import @"Neioo.h"
 ```
 ##### 2. Initialize Neioo
 Neioo must be started only after initialization. If the user doesn't complete initialization before using Neioo, then it will throw the NeiooException to remind you to complete this step.
-```
+
+``` objective-c
 #import "AppDelegate.h"
 #import "Neioo.h"
 // 1. Setup Neioo delegate
@@ -63,7 +64,8 @@ Neioo must be started only after initialization. If the user doesn't complete in
 }
 ```
 There are two location authorization mode you can choose, and it will correspond to your description of location service which you set in info.plist.
-```
+
+``` objective-c
 #import "Neioo.h"
 typedef enum {
       NeiooLocationAuthorizationWhenInUse,
@@ -99,14 +101,14 @@ Please do not impatient for previous step, all of the steps are in order to prod
 
 ##### 2. Implementation: Space Delegate Function
 This method is mainly used to detect that a user enters / leaves space. When the user enters the region of space which is determined by signal of beacons, the following methods will be triggered by Neioo：
-```
+``` objective-c
 - (void)neioo:(Neioo *)neioo didEnterSpace:(NeiooSpace *)space
 {
     NSLog(@"Enter Space!!!");
 }
 ```
 When the user leaves beacon deployment range, the following methods will trigger by Neioo：
-```
+``` objective-c
 - (void)neioo:(Neioo *)neioo didLeaveSpace:(NeiooSpace *)space
 {
     NSLog(@"Leave Space!!!");
@@ -114,7 +116,7 @@ When the user leaves beacon deployment range, the following methods will trigger
 ```
 ##### 3. Implementation: Campaign Triggered Delegate Function
 When the campaign is triggered, the method will be called and return with campaign. In Neioo SDK, campaign is packaged as `NeiooCampaign` object, which contains the settings of ​​Neioo Cloud and beacon corresponding object is `NeiooBeacon`, which contains information of beacon in Neioo Cloud. Now that we can use the action we already set up as an example：
-```
+``` objective-c
 - (void)campaignTriggered:(NeiooCampaign *)campaign beacon:(NeiooBeacon *)beacon
 {
     for (NeiooAction *action in campaign.actions){
@@ -142,7 +144,7 @@ Now that we create a campaign with criteria, and other settings can be consisten
 ![](screenshot/add_campaign02.png)
 
 ##### 3. Import User's Data to Neioo
-```
+``` objective-c
 ...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Neioo setUpAppKey:@"YOUR APP KEY" delegate:self withLocationAuthorization:NeiooLocationAuthorizationAlways];
@@ -167,7 +169,7 @@ This demo is similar to the aforementioned implementations, the only difference 
 
 ##### 2. Implementation: Shake Range Delegate Function
 This delegate will notify you if user is inside/outside the shake campaign range. You can show some UI to inform the user to shake his/her phone.
-```
+``` objective-c
 - (void)inShakeRangeWithCampaign:(NeiooCampaign *)campaign
 {
     NSLog(@"In shake range ...");
@@ -180,7 +182,7 @@ This delegate will notify you if user is inside/outside the shake campaign range
 ```
 ##### 3. Implementation: Motion Detection and Execute Shake Campaign
 Firstly, add `CoreMotion.framework` to your project and import `Neioo.h`, `<CoreMotion/CoreMotion.h>` to `viewController.m`. When you received the shake signal, you can execute the campaign which is criteria matched. Here is the step by step :
-```
+``` objective-c
 #import "ViewController.h"
 #import "Neioo.h"
 #import <CoreMotion/CoreMotion.h>
