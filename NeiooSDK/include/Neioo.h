@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #ifndef _NEIOO_
 #define _NEIOO_
@@ -16,7 +17,7 @@
 #import "NeiooCriteria.h"
 #import "NeiooCampaign.h"
 #import "NeiooSpace.h"
-
+#import <CoreLocation/CoreLocation.h>
 #endif
 
 @class NeiooCampaign;
@@ -90,14 +91,26 @@ typedef enum {
 @interface Neioo : NSObject
 
 /**---------------------------------------------------------------------------------------
- * @name Initialize
+ * @name Setting and Getting the Delegate
  *  ---------------------------------------------------------------------------------------
  */
 
 /**
+ * The delegate of the app object.
+ */
+
+ @property (weak, nonatomic) id <NeiooDelegate> delegate;
+ 
+/**---------------------------------------------------------------------------------------
+ * @name Initialize
+ *  ---------------------------------------------------------------------------------------
+ */
+/**
  *  Set up Neioo cloud app key, Neioo delegate and location authorization type. Users are not allowed to use neioo shared instance before finishing this step.
  */
 + (void)setUpAppKey:(NSString *)appKey delegate:(id<NeiooDelegate>)delegate withLocationAuthorization:(NeiooLocationAuthorizationType)type;
+
++ (void)setUpAppKey:(NSString *)appKey;
 
 /**---------------------------------------------------------------------------------------
  * @name Getting the Instance
@@ -115,7 +128,12 @@ typedef enum {
  */
 
 /**
- *  Start monitoring beacons
+ *  Start monitoring beacons with specific beacon Region
+ */
+- (void)enableWithMonitorRegion:(CLBeaconRegion *)beaconRegion;
+
+/**
+ *  Start monitoring beacons with default beacon Region
  */
 - (void)enable;
 
@@ -123,6 +141,27 @@ typedef enum {
  *  Stop monitoring beacons
  */
 - (void)disable;
+
+
+/**---------------------------------------------------------------------------------------
+ * @name Handle Notification
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+ *  convert notification to campaign. If there is not validated notification, Neioo will return nil
+ */
++ (NeiooCampaign *)getNotificationCampaign:(UILocalNotification *)notification;
+
+/**---------------------------------------------------------------------------------------
+ * @name KPIs record
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+ *  when the user engaged the campaign , Neioo will track this record and upload data to cloud through this method
+ */
++ (void)setCampaignEngaged:(NeiooCampaign *)campaign;
 
 /**---------------------------------------------------------------------------------------
  * @name Getting the Spaces
@@ -165,11 +204,10 @@ typedef enum {
  */
 - (void)clearCriteriaData;
 
-/*
-- (NSArray *)getBeacons;
-- (NSArray *)getActions;
-- (NSArray *)getCriterias;
-- (NeiooAction *)getActionWithId:(NSString *)actionId;
-- (NeiooCampaign *)getCampaignWithSpaceId:(NSString *)spaceId;
+/**
+ *  get all the criteria data.
  */
++ (NSMutableDictionary *)getAllCriteriaData;
+
+
 @end
